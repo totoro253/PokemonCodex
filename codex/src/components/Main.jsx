@@ -6,6 +6,11 @@ const Main = () =>  {
        <div className="container">
         <div className="left-content">
             <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
         </div>
         <div className="right-content"></div>
        
