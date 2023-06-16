@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import  Card from './Card';
 import PokeInfo from "./Pokemoninfo";
+import axios from  'axios'
 
 const Main = () =>  {
+    //use state   to hold pokemon data
+    const [pokeData,setPokedata]=useState()
     return (
        <div className="container">
         <div className="left-content">
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
+            <Card/>
             <Card/>
             <Card/>
             <Card/>
