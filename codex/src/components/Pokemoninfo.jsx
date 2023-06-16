@@ -2,10 +2,11 @@ import React from "react";
 
 const PokeInfo=()=>{
     return(
-        <>
-         <h1>Charmander</h1>
+        <div className="charmander">
+            <h2>Charmander</h2>
        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/4.svg" alt="" />
         <div className="abilities">
+
             <div className="group">
                 <h2>Blaze</h2>
             </div>
@@ -20,7 +21,7 @@ const PokeInfo=()=>{
             <h3>Special-attack:  50</h3>
             <h3>Speed</h3>
         </div>
-        </>
+        </div>
     )
 }
 
