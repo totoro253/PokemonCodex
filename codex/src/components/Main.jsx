@@ -15,7 +15,7 @@ const Main = () =>  {
         setLoading(true)
         //making API request
         const res= await axios.get(url);
-        console.log(res)
+        console.log(res.data)
     }
     //initial url
     useEffect(()=>{
