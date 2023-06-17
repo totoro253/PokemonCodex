@@ -4,7 +4,6 @@ import Pokemoninfo from "./Pokemoninfo";
 import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
-
 const Main=()=>{
     const [pokeData,setPokeData]=useState([]);
     const [loading,setLoading]=useState(true);
