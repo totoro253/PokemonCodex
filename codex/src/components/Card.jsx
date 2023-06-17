@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = (pokemon,loading) =>  {
+const Card = ({pokemon,loading,infoPokemon}) =>  {
     return(
         <>
         {
@@ -11,7 +11,7 @@ const Card = (pokemon,loading) =>  {
                         < div className="card">
                         <h2>{item.id}</h2>
                         <img  src={item.sprites.front_default} alt=""/>
-                        <h3>Charmander</h3>
+                        <h3>{item.name}</h3>
                          </div>
                     </>
                 )

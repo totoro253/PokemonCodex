@@ -10,7 +10,7 @@ body{
 .container{
     width: 90%;
     margin: auto;
-    padding-top: 100px;
+    padding-top:80px;
     display: flex;
 }
 .left-content, .right-content{
@@ -18,21 +18,23 @@ body{
 }
 
 .charmander{
-    width: 30%;
+    width: 20%;
     margin: auto;
     display: flex;
     justify-content: space-around;
     align-items: right;
+    position: absolute;
+    right: 150px;
 }
 
 .charmander h1  {
     width: 50%;
     margin: auto;
-    display: flex;
+    display: right;
     justify-content: space-around;
     align-items: right;
-    text-align: right;
-    
+    position: absolute;
+    right: 150px;
 }
 
 .left-content{
@@ -68,6 +70,7 @@ body{
     padding: 0.5rem;
     font-size: 12px;
     border-radius: 8px;
+
 }
 
 .base-stat {
