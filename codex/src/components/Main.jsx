@@ -10,13 +10,29 @@ const Main = () =>  {
     const[loading,setLoading]=useState(true)
     //loading url
     const[url,setUrl]=useState("https://pokeapi.co/api/v2/pokemon/")
-    
+    const[nextUrl,setNextUrl]=useState()
+    const[prevUrl,setPrevUrl]=useState()
+
     const pokeFun=async()=>{
         setLoading(true)
         //making API request
         const res= await axios.get(url);
-        console.log(res.data)
+        setNextUrl(res.data.next)
+        setPrevUrl(res.data.previous)
+        getPokemon(res.data.results)
+        setLoading(false)
     }
+
+    //method to get the  pokemons
+    const getPokemon=async(res)=>{
+        res.map(async(item)=>{
+            const result = await axios.get(item.url)
+            console.log(result.data
+                //store object
+            )
+        })
+    }
+
     //initial url
     useEffect(()=>{
         pokeFun();
