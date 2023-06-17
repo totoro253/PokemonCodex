@@ -23,16 +23,6 @@ const Main = () =>  {
         setLoading(false)
     }
 
-    //method to get the  pokemons
-    const getPokemon=async(res)=>{
-        res.map(async(item)=>{
-            const result = await axios.get(item.url)
-            console.log(result.data
-                //store object
-            )
-        })
-    }
-
     //initial url
     useEffect(()=>{
         pokeFun();
