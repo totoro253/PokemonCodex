@@ -5,21 +5,30 @@ import axios from "axios";
 import { useState } from "react";
 import { useEffect } from "react";
 const Main=()=>{
+    //initial data set it in  a  array
     const [pokeData,setPokeData]=useState([]);
+    //initial loading and  set to true
     const [loading,setLoading]=useState(true);
+    //initial url
     const [url,setUrl]=useState("https://pokeapi.co/api/v2/pokemon/")
     const [nextUrl,setNextUrl]=useState();
     const [prevUrl,setPrevUrl]=useState();
     const [pokeDex,setPokeDex]=useState();
 
+    //initial loading and make  api request.
+    // take response  and return data
     const pokeFun=async()=>{
         setLoading(true)
         const res=await axios.get(url);
         setNextUrl(res.data.next);
+        // set response for previous
         setPrevUrl(res.data.previous);
+        // parse the array 
         getPokemon(res.data.results)
         setLoading(false)
     }
+    //pass the array with the pokemons
+    //set the array 
     const getPokemon=async(res)=>{
        res.map(async(item)=>{
           const result=await axios.get(item.url)
@@ -30,6 +39,7 @@ const Main=()=>{
           })
        })   
     }
+    //will render url
     useEffect(()=>{
         pokeFun();
     },[url])
