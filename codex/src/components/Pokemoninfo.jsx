@@ -4,11 +4,13 @@ const PokeInfo=({data})=>{
     console.log(data)
     return(
         <>
-        {   //
+        {    
+        //contain data about pokemon, check if there is information
             (!data)?"":
             <>
         <div className="charmander">
             <h2>{data.name}</h2>
+            
        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`} alt="" width="300" height="400" />
 
         <div className="abilities">
