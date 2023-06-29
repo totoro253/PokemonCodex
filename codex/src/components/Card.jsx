@@ -4,6 +4,8 @@ const Card = ({pokemon,loading,infoPokemon}) =>  {
     return(
         <>
         {
+            //check if data is loading
+            //if it is true show pokemon 
             loading ? <h1>Loading</h1>:
             pokemon.map((item) => {
                 return (
